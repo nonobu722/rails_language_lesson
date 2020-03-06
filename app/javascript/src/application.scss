@@ -1,0 +1,16 @@
+@import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+// Message
+.notifications {
+  color: white;
+  text-align: center;  
+
+  .notice {
+    background-color: lightGreen;
+  }
+
+  .alert {
+    background-color: red;
+  }
+}

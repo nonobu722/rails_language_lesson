@@ -19,6 +19,12 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 # Use haml instead of erb
 gem 'haml-rails', '~> 2.0'
+# Use devise for authentication
+gem 'devise', '~> 4.7.1'
+gem 'devise-i18n', '~> 1.9'
+gem 'devise-i18n-views', '~> 0.3'
+# Use for translation
+gem 'rails-i18n', '~> 6.0.0'
 
 group :production do
   gem 'pg', '~> 1.2.2'

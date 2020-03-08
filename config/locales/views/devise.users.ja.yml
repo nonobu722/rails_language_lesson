@@ -1,5 +1,5 @@
 ja:
-  devise:
+  users:
     confirmations:
       new:
         resend_confirmation_instructions: "アカウント確認メール再送"

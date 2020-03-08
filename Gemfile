@@ -24,6 +24,7 @@ gem 'devise', '~> 4.7.1'
 gem 'devise-i18n', '~> 1.9'
 gem 'devise-i18n-views', '~> 0.3'
 # Use for translation
+gem 'devise-bootstrap-views', '~> 1.0.0'
 gem 'rails-i18n', '~> 6.0.0'
 
 group :production do

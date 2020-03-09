@@ -6,4 +6,9 @@ Rails.application.routes.draw do
     passwords: 'users/passwords',
     registrations: 'users/registrations'
   }
+  devise_for :tutors, controllers: {
+    sessions: 'tutors/sessions',
+    passwords: 'tutors/passwords',
+    registrations: 'tutors/registrations'
+  }
 end

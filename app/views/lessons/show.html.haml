@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @lesson.name
+%p
+  %b Url:
+  = @lesson.url
+%p
+  %b Date from:
+  = @lesson.date_from
+%p
+  %b Date to:
+  = @lesson.date_to
+%p
+  %b Tutor:
+  = @lesson.tutor
+
+= link_to 'Edit', edit_lesson_path(@lesson)
+\|
+= link_to 'Back', lessons_path

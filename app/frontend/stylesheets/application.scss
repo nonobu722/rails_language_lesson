@@ -1,5 +1,11 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+/* Basic Style */
+body {
+	font-family: 'Roboto', sans-serif;
+}
 
 /* Message */
 .notifications {

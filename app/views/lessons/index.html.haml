@@ -1,29 +1,20 @@
-%h1 Listing lessons
-
-%table
-  %thead
-    %tr
-      %th Name
-      %th Url
-      %th Date from
-      %th Date to
-      %th Tutor
-      %th
-      %th
-      %th
-
-  %tbody
-    - @lessons.each do |lesson|
-      %tr
-        %td= lesson.name
-        %td= lesson.url
-        %td= lesson.date_from
-        %td= lesson.date_to
-        %td= lesson.tutor
-        %td= link_to 'Show', lesson
-        %td= link_to 'Edit', edit_lesson_path(lesson)
-        %td= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Lesson', new_lesson_path
+= provide(:title, t('.title'))
+%h1.text-center
+  = t('.list')
+.row.pt-5
+  - @lessons.each do |lesson|
+    .col-sm-6.col-md-3
+      .card.img-thumbnail
+        %img.card-img-top
+          - if lesson.image? 
+            = image_tag lesson.image.url, alt: 'lesson_image'
+        .card-body.px-2.py-3
+          %h5.card-title
+            = lesson.name
+          %p.card-text
+            = lesson.language.name
+          %p.card-text
+            = lesson.tutor
+          %p.mb-0
+            %a.btn.btn-success.btn-sm{ href: '#'}
+              = t('.detail')

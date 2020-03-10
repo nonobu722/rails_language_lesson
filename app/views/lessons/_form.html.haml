@@ -1,25 +1,21 @@
-= form_for @lesson do |f|
-  - if @lesson.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@lesson.errors.count, "error")} prohibited this lesson from being saved:"
-      %ul
-        - @lesson.errors.full_messages.each do |message|
-          %li= message
-
-  .field
+= form_with model: @lesson do |f|
+  .form-group
     = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :url
-    = f.text_field :url
-  .field
+    = f.text_field :name, class: 'form-control'
+  .form-group
     = f.label :date_from
-    = f.datetime_select :date_from
-  .field
+    = f.datetime_field :date_from, class: 'form-control'
+  .form-group
     = f.label :date_to
-    = f.datetime_select :date_to
-  .field
-    = f.label :tutor
-    = f.text_field :tutor
-  .actions
-    = f.submit 'Save'
+    = f.datetime_field :date_to, class: 'form-control'
+  .form-group
+    = f.label :url
+    = f.text_field :url, class: 'form-control'
+  .form-group
+    = f.label :language_id
+    = f.select :language_id, Language.all.map { |lang| [lang.name, lang.id] }, {:prompt => t('shared.select.prompt')}, class: 'form-control'
+  .form-group
+    = f.label :image
+    = f.file_field :image, class: 'form-control-file'
+  .form-group
+    = f.submit t('shared.buttons.create'), class: 'btn btn-primary'

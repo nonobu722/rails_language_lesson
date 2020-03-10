@@ -1,0 +1,9 @@
+ja:
+  lessons:
+    index:
+      title: "TOP"
+      list: "レッスン一覧"
+      detail: "詳細"
+    new:
+      title: "レッスン新規作成"
+      

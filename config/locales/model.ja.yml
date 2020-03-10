@@ -2,7 +2,8 @@ ja:
   activerecord:
     models:
       user: "ユーザ"
-      tutor: 講師
+      tutor: "講師"
+      lesson: "レッスン"
     attributes:
       user:
         current_password: "現在のパスワード"
@@ -16,4 +17,11 @@ ja:
         password: "パスワード"
         password_confirmation: "確認用パスワード"
         remember_me: "ログインを記憶"
-        
+      lesson:
+        name: "レッスン名"
+        date_from: "開始日時"
+        date_to: "終了日時"
+        url: "レッスンURL"
+        language: "言語"
+        image: "イメージ画像"
+

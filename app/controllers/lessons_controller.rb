@@ -4,7 +4,7 @@ class LessonsController < ApplicationController
   before_action :set_lesson, only: %i[show edit update destroy]
 
   def index
-    @lessons = Lesson.all
+    @lessons = Lesson.all.includes(:language, :tutor)
   end
 
   def show; end
@@ -18,9 +18,10 @@ class LessonsController < ApplicationController
   def create
     @lesson = Lesson.new(lesson_params)
 
-    if @lesson.save
+    if @lesson.save!
       redirect_to @lesson, notice: 'Lesson was successfully created.'
     else
+      flash.now[:alert] = 'Error'
       render :new
     end
   end
@@ -45,6 +46,6 @@ class LessonsController < ApplicationController
   end
 
   def lesson_params
-    params.require(:lesson).permit(:name, :url, :date_from, :date_to, :tutor_id)
+    params.require(:lesson).permit(:name, :url, :date_from, :date_to, :tutor_id, :image, :language_id)
   end
 end

@@ -1,5 +1,4 @@
-%h1 New lesson
-
+= provide(:title, t('.title'))
+%h1= t('.title')
 = render 'form'
-
-= link_to 'Back', lessons_path
+= link_to t('shared.buttons.back'), root_path

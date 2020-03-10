@@ -1,5 +1,10 @@
 ja:
   shared:
-    link:
+    buttons:
       user_login: "ログイン"
       user_logout: "ログアウト"
+      back: "戻る"
+      create: "作成"
+    select:
+      prompt: "選択してください"
+      

@@ -1,7 +1,8 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{ content: "text/html; charset=UTF-8", "http-equiv": "Content-Type" }/
+    %meta{ name: 'viewport', content: 'initial-scale=1.0, user-scalable=no' }
     %title
       = yield(:title)
     = csrf_meta_tags
@@ -9,6 +10,7 @@
     = javascript_pack_tag 'application'
     = stylesheet_pack_tag 'application'
   %body
+    = render 'layouts/header'
     = render 'layouts/notifications'
-    .container
+    .container.pt-3
       = yield

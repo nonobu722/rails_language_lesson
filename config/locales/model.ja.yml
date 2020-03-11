@@ -22,6 +22,6 @@ ja:
         date_from: "開始日時"
         date_to: "終了日時"
         url: "レッスンURL"
-        language: "言語"
+        language_id: "言語"
         image: "イメージ画像"
 

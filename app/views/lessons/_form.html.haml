@@ -14,7 +14,7 @@
     = f.text_field :url, class: 'form-control'
   .form-group
     = f.label :language_id
-    = f.select :language_id, Language.all.map { |lang| [lang.name, lang.id] }, {:prompt => t('shared.select.prompt')}, class: 'form-control'
+    = f.select :language_id, Language.all.map { |lang| [lang.name, lang.id] }, {prompt: t('shared.select.prompt')}, class: 'form-control'
   .form-group
     = f.label :image
     = f.file_field :image, class: 'form-control-file'

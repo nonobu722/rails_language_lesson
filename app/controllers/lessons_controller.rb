@@ -18,10 +18,9 @@ class LessonsController < ApplicationController
   def create
     @lesson = Lesson.new(lesson_params)
 
-    if @lesson.save!
+    if @lesson.save
       redirect_to @lesson, notice: 'Lesson was successfully created.'
     else
-      flash.now[:alert] = 'Error'
       render :new
     end
   end

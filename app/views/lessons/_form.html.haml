@@ -1,4 +1,5 @@
-= form_with model: @lesson do |f|
+= form_with model: @lesson, local: true do |f|
+  = render 'shared/error_messages', model: @lesson
   .form-group
     = f.label :name
     = f.text_field :name, class: 'form-control'
@@ -19,3 +20,4 @@
     = f.file_field :image, class: 'form-control-file'
   .form-group
     = f.submit t('shared.buttons.create'), class: 'btn btn-primary'
+    

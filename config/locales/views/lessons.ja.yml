@@ -6,4 +6,10 @@ ja:
       detail: "詳細"
     new:
       title: "レッスン新規作成"
+    create: 
+      success: "新しいレッスンを作成しました"
+    update:
+      success: "レッスンを更新しました"
+    destroy:
+      success: "レッスンを削除しました"
       

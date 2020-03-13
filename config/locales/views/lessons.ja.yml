@@ -12,4 +12,8 @@ ja:
       success: "レッスンを更新しました"
     destroy:
       success: "レッスンを削除しました"
+    edit:
+      title: レッスン編集
+    show:
+      title: レッスン詳細
       

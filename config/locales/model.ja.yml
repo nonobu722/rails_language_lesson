@@ -24,4 +24,5 @@ ja:
         url: "レッスンURL"
         language_id: "言語"
         image: "イメージ画像"
-
+      language:
+        name: "言語"

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class Tutor < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  before_save { self.email = email.downcase }
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 

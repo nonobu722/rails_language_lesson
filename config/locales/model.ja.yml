@@ -6,6 +6,7 @@ ja:
       lesson: "レッスン"
     attributes:
       user:
+        name: "ユーザ名"
         current_password: "現在のパスワード"
         email: "メールアドレス"
         password: "パスワード"

@@ -1,5 +1,12 @@
 ja:
   lessons:
+    shared:
+      label:
+        name: "レッスン名：%{name}"
+        date_from: "開始時間：%{name}"
+        date_to: "終了時間：%{name}"
+        language: "言語：%{name}"
+        tutor: "講師名：%{name}"
     index:
       title: "TOP"
       list: "レッスン一覧"

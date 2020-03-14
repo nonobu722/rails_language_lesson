@@ -14,11 +14,11 @@
           %h5.card-title
             = lesson.name
           %p.card-text
-            = lesson.language.name
+            = t('lessons.shared.label.language', name: lesson.language.name)
           %p.card-text
-            = lesson.tutor
+            = t('lessons.shared.label.tutor', name: lesson.tutor.name)
           %p.mb-0
-            %a.btn.btn-success.btn-sm{ href: '#'}
+            %a.btn.btn-success.btn-sm{ href: lesson_path(lesson.id)}
               = t('.detail')
 - if !@lessons.any?
   = render 'shared/no_result', name: t('.name')

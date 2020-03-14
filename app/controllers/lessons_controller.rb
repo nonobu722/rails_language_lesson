@@ -43,7 +43,7 @@ class LessonsController < ApplicationController
   private
 
   def set_lesson
-    @lesson = Lesson.includes(:language, :tutor).find(params[:id])
+    @lesson = Lesson.find(params[:id])
   end
 
   def lesson_params

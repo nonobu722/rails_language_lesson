@@ -1,24 +1,21 @@
 = provide(:title, t('.title'))
 %h1= t('.title')
-
-%p#notice= notice
-
-%p
-  %b Name:
-  = @lesson.name
-%p
-  %b Url:
-  = @lesson.url
-%p
-  %b Date from:
-  = @lesson.date_from
-%p
-  %b Date to:
-  = @lesson.date_to
-%p
-  %b Tutor:
-  = @lesson.tutor
-
-= link_to 'Edit', edit_lesson_path(@lesson)
-\|
-= link_to 'Back', lessons_path
+.row.lesson_detail
+  .col-sm-12.col-md-6
+    - if @lesson.image?
+      = image_tag @lesson.image.url, alt: 'lesson_image'
+    - else
+      %img{src: (asset_pack_path 'media/images/no_image.png')}
+  .col-sm-12.col-md-6
+    %p
+      = t('lessons.shared.label.name', name: @lesson.name)
+    %p
+      = t('lessons.shared.label.tutor', name: @lesson.tutor.name)
+    %p
+      = t('lessons.shared.label.language', name: @lesson.language.name)
+    %p
+      = t('lessons.shared.label.date_from', name: l(@lesson.date_from, format: :short))
+    %p
+      = t('lessons.shared.label.date_to', name: l(@lesson.date_to, format: :short))
+.pt-3
+  = link_to t('shared.buttons.back'), :back

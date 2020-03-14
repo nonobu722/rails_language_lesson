@@ -4,10 +4,10 @@
 .row.pt-5
   - @lessons.each do |lesson|
     .col-sm-6.col-md-3
-      .card
-        %img.card-img-top
-          - if lesson.image? 
-            = image_tag lesson.image.url, alt: 'lesson_image'
+      .card.h-100
+        .card-img-top
+          - if lesson.image?
+            = image_tag lesson.image.url(:thumb), alt: 'lesson_image'
           - else
             %img{src: (asset_pack_path 'media/images/no_image.png')}
         .card-body.px-2.py-3

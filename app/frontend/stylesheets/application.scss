@@ -18,3 +18,13 @@ body {
     background-color: red;
   }
 }
+
+/* Image */
+.card {
+  .card-img-top {
+    img {
+      height: 180px;
+      width: 100%;
+    } 
+  }
+}

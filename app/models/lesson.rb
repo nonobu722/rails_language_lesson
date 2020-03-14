@@ -5,4 +5,6 @@ class Lesson < ApplicationRecord
 
   belongs_to :tutor
   belongs_to :language
+
+  mount_uploader :image, ImageUploader
 end

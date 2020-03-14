@@ -26,6 +26,10 @@ gem 'devise-i18n', '~> 1.9'
 gem 'devise-i18n-views', '~> 0.3'
 # Use for translation
 gem 'rails-i18n', '~> 6.0.0'
+# Use for upload image
+gem 'carrierwave', '~> 2.1.0'
+gem 'cloudinary', '~> 1.13.0'
+gem 'mini_magick', '~> 4.10.0'
 
 group :production do
   gem 'pg', '~> 1.2.2'

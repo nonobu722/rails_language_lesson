@@ -2,7 +2,7 @@
 
 class LessonsController < ApplicationController
   before_action :set_lesson, only: %i[show edit update destroy]
-  # before_action :authenticate_tutor!, only: %i[new edit create update destroy]
+  before_action :authenticate_tutor!, only: %i[new edit create update destroy]
 
   def index
     @lessons = Lesson.all.includes(:language, :tutor)
@@ -18,6 +18,7 @@ class LessonsController < ApplicationController
 
   def create
     @lesson = Lesson.new(lesson_params)
+    @lesson.tutor_id = current_tutor.id
 
     if @lesson.save
       redirect_to @lesson, notice: t('.success')

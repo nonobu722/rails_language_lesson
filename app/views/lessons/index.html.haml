@@ -20,3 +20,5 @@
           %p.mb-0
             %a.btn.btn-success.btn-sm{ href: '#'}
               = t('.detail')
+- if !@lessons.any?
+  = render 'shared/no_result', name: t('.name')

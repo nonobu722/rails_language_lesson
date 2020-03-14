@@ -4,6 +4,7 @@ ja:
       title: "TOP"
       list: "レッスン一覧"
       detail: "詳細"
+      name: "レッスン"
     new:
       title: "レッスン新規作成"
     create: 

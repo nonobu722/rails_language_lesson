@@ -7,4 +7,6 @@ ja:
       create: "作成"
     select:
       prompt: "選択してください"
+    message:
+      no_result: "%{name}はありません"
       

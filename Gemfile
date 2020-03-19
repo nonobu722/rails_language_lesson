@@ -39,7 +39,11 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Use for formatting
-  gem 'rubocop', '~> 0.55.0', require: false
+  gem 'rubocop', '~> 0.80.1', require: false
+  gem 'rubocop-performance', '~> 1.5.2'
+  gem 'rubocop-rails', '~> 2.4.2'
+  gem 'ruby-debug-ide', '~> 0.7.0', require: false
+  gem 'solargraph', '~> 0.38.5'
 end
 
 group :development do

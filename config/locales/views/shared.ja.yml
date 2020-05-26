@@ -1,8 +1,10 @@
 ja:
   shared:
     buttons:
-      user_login: "ログイン"
+      user_login: "受講者ログイン"
       user_logout: "ログアウト"
+      tutor_login: "講師ログイン"
+      tutor_logout: "ログアウト"
       back: "戻る"
       create: "作成"
     select:

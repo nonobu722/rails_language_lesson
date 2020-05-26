@@ -4,5 +4,16 @@
       %i.fas.fa-home.fa-2x.navbar-brand
     .collapse.navbar-collapse#navbarNav
       %ul.navbar-nav.ml-auto
-        %li.nav-item.nav-link
-          = link_to t('shared.buttons.user_login'), new_user_session_path
+        - if !user_signed_in? && !tutor_signed_in?
+          %li.nav-item.nav-link
+            = link_to t('shared.buttons.user_login'), new_user_session_path
+          %li.nav-item.nav-link
+            = link_to t('shared.buttons.tutor_login'), new_tutor_session_path
+        - if user_signed_in?
+          %li.nav-item.nav-link
+            = link_to t('shared.buttons.user_logout'), destroy_user_session_path, method: :delete
+        - if tutor_signed_in?
+          %li.nav-item.nav-link
+            = link_to t('lessons.new.title'), new_lesson_path
+          %li.nav-item.nav-link
+            = link_to t('shared.buttons.tutor_logout'), destroy_tutor_session_path, method: :delete

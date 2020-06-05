@@ -13,7 +13,7 @@ ja:
       detail: "詳細"
       name: "レッスン"
     new:
-      title: "レッスン新規作成"
+      title: "レッスン枠登録"
     create: 
       success: "新しいレッスンを作成しました"
     update:

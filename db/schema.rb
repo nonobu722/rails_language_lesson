@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_14_130415) do
+ActiveRecord::Schema.define(version: 2020_05_27_082312) do
 
   create_table "languages", force: :cascade do |t|
     t.string "name"
@@ -41,7 +41,11 @@ ActiveRecord::Schema.define(version: 2020_03_14_130415) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
+    t.string "image"
+    t.text "profile"
+    t.integer "language_id"
     t.index ["email"], name: "index_tutors_on_email", unique: true
+    t.index ["language_id"], name: "index_tutors_on_language_id"
     t.index ["reset_password_token"], name: "index_tutors_on_reset_password_token", unique: true
   end
 
@@ -60,4 +64,5 @@ ActiveRecord::Schema.define(version: 2020_03_14_130415) do
 
   add_foreign_key "lessons", "languages"
   add_foreign_key "lessons", "tutors"
+  add_foreign_key "tutors", "languages"
 end

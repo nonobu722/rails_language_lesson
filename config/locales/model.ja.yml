@@ -19,6 +19,9 @@ ja:
         password: "パスワード"
         password_confirmation: "確認用パスワード"
         remember_me: "ログインを記憶"
+        profile: "プロフィール"
+        image: "顔写真"
+        language_id: "言語"
       lesson:
         name: "レッスン名"
         date_from: "開始日時"

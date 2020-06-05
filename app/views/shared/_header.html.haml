@@ -14,6 +14,8 @@
             = link_to t('shared.buttons.user_logout'), destroy_user_session_path, method: :delete
         - if tutor_signed_in?
           %li.nav-item.nav-link
+            = link_to t('tutors.registrations.edit.title'), edit_tutor_registration_path
+          %li.nav-item.nav-link
             = link_to t('lessons.new.title'), new_lesson_path
           %li.nav-item.nav-link
             = link_to t('shared.buttons.tutor_logout'), destroy_tutor_session_path, method: :delete

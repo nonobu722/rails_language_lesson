@@ -38,3 +38,6 @@ yarn-debug.log*
 
 # Ignore editor files
 /.vscode
+
+# Ignore the development DB files
+/data

@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_05_27_082312) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "languages", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -23,11 +26,11 @@ ActiveRecord::Schema.define(version: 2020_05_27_082312) do
     t.string "url"
     t.datetime "date_from"
     t.datetime "date_to"
-    t.integer "tutor_id", null: false
+    t.bigint "tutor_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image"
-    t.integer "language_id"
+    t.bigint "language_id"
     t.index ["language_id"], name: "index_lessons_on_language_id"
     t.index ["tutor_id"], name: "index_lessons_on_tutor_id"
   end
@@ -43,7 +46,7 @@ ActiveRecord::Schema.define(version: 2020_05_27_082312) do
     t.string "name"
     t.string "image"
     t.text "profile"
-    t.integer "language_id"
+    t.bigint "language_id"
     t.index ["email"], name: "index_tutors_on_email", unique: true
     t.index ["language_id"], name: "index_tutors_on_language_id"
     t.index ["reset_password_token"], name: "index_tutors_on_reset_password_token", unique: true
